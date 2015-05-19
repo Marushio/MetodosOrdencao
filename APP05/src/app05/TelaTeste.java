@@ -14,10 +14,24 @@ public class TelaTeste extends javax.swing.JFrame {
     /**
      * Creates new form TelaTeste
      */
+    private VetDados vetDados;
     public TelaTeste() {
         initComponents();
+        vetDados=new VetDados();
+        TabelaModelo dados = new TabelaModelo(vetDados);
+        //Vincular a tabela com o modelo
+        jtTabela.setModel(dados);
         
-        
+    }
+    
+    public TelaTeste(VetDados vetDados){
+        this.vetDados = vetDados;
+        initComponents();
+        //Criar modelo
+        TabelaModelo dados = new TabelaModelo(vetDados);
+        //Vincular a tabela com o modelo
+        jtTabela.setModel(dados);
+    
     }
 
     /**
@@ -39,7 +53,7 @@ public class TelaTeste extends javax.swing.JFrame {
         jRdBtn_InvOrd = new javax.swing.JRadioButton();
         jRdBtn_10percent = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jtTabela = new javax.swing.JTable();
         jButton_Exec = new javax.swing.JButton();
 
         jRadioButton3.setText("jRadioButton3");
@@ -62,7 +76,7 @@ public class TelaTeste extends javax.swing.JFrame {
 
         jRdBtn_10percent.setText("Grupos 10% iguais");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jtTabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -73,7 +87,7 @@ public class TelaTeste extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jtTabela);
 
         jButton_Exec.setText("Executar");
 
@@ -182,6 +196,6 @@ public class TelaTeste extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRdBtn_Aleatorio;
     private javax.swing.JRadioButton jRdBtn_InvOrd;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jtTabela;
     // End of variables declaration//GEN-END:variables
 }
