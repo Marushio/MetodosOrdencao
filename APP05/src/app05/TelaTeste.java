@@ -35,7 +35,8 @@ public class TelaTeste extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jRadioButton3 = new javax.swing.JRadioButton();
+        btnGroup_TamanhoVetor = new javax.swing.ButtonGroup();
+        btnGroup_Cenario = new javax.swing.ButtonGroup();
         jRdBtn_30ele = new javax.swing.JRadioButton();
         jRdBtn_20kele = new javax.swing.JRadioButton();
         jLabel_Titulo = new javax.swing.JLabel();
@@ -48,12 +49,12 @@ public class TelaTeste extends javax.swing.JFrame {
         jtTabela = new javax.swing.JTable();
         jButton_Exec = new javax.swing.JButton();
 
-        jRadioButton3.setText("jRadioButton3");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnGroup_TamanhoVetor.add(jRdBtn_30ele);
         jRdBtn_30ele.setText("30 elementos");
 
+        btnGroup_TamanhoVetor.add(jRdBtn_20kele);
         jRdBtn_20kele.setText("20000 elementos");
 
         jLabel_Titulo.setText("Métodos de Ordenação");
@@ -62,10 +63,13 @@ public class TelaTeste extends javax.swing.JFrame {
 
         jLabel_Cenario.setText("Cenário");
 
+        btnGroup_Cenario.add(jRdBtn_Aleatorio);
         jRdBtn_Aleatorio.setText("Aleatório");
 
+        btnGroup_Cenario.add(jRdBtn_InvOrd);
         jRdBtn_InvOrd.setText("Inversamente Ordenado");
 
+        btnGroup_Cenario.add(jRdBtn_10percent);
         jRdBtn_10percent.setText("Grupos 10% iguais");
 
         jtTabela.setModel(new javax.swing.table.DefaultTableModel(
@@ -82,6 +86,11 @@ public class TelaTeste extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jtTabela);
 
         jButton_Exec.setText("Executar");
+        jButton_Exec.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_ExecActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -141,6 +150,10 @@ public class TelaTeste extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton_ExecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ExecActionPerformed
+        
+    }//GEN-LAST:event_jButton_ExecActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -177,11 +190,12 @@ public class TelaTeste extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btnGroup_Cenario;
+    private javax.swing.ButtonGroup btnGroup_TamanhoVetor;
     private javax.swing.JButton jButton_Exec;
     private javax.swing.JLabel jLabel_Cenario;
     private javax.swing.JLabel jLabel_Titulo;
     private javax.swing.JLabel jLabel_TmnVetor;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JRadioButton jRdBtn_10percent;
     private javax.swing.JRadioButton jRdBtn_20kele;
     private javax.swing.JRadioButton jRdBtn_30ele;

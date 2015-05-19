@@ -2,10 +2,9 @@
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jRadioButton3"/>
-      </Properties>
+    <Component class="javax.swing.ButtonGroup" name="btnGroup_TamanhoVetor">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="btnGroup_Cenario">
     </Component>
   </NonVisualComponents>
   <Properties>
@@ -96,11 +95,17 @@
   <SubComponents>
     <Component class="javax.swing.JRadioButton" name="jRdBtn_30ele">
       <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="btnGroup_TamanhoVetor"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="30 elementos"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRdBtn_20kele">
       <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="btnGroup_TamanhoVetor"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="20000 elementos"/>
       </Properties>
     </Component>
@@ -121,16 +126,25 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRdBtn_Aleatorio">
       <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="btnGroup_Cenario"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Aleat&#xf3;rio"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRdBtn_InvOrd">
       <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="btnGroup_Cenario"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Inversamente Ordenado"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRdBtn_10percent">
       <Properties>
+        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+          <ComponentRef name="btnGroup_Cenario"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Grupos 10% iguais"/>
       </Properties>
     </Component>
@@ -159,6 +173,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Executar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_ExecActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
