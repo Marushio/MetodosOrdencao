@@ -5,6 +5,8 @@
  */
 package app05;
 
+import java.util.Random;
+
 /**
  *
  * @author DiógenesGalileu
@@ -21,8 +23,8 @@ public class TelaTeste extends javax.swing.JFrame {
         //Criar modelo
         TabelaModelo dados = new TabelaModelo(vetDados);
         //Vincular a tabela com o modelo
-        jtTabela.setModel(dados);
-        
+        jtTabela.setModel(dados);   
+        jRdBtn_30ele.setSelected(true);
     }
 
 
@@ -56,6 +58,11 @@ public class TelaTeste extends javax.swing.JFrame {
 
         btnGroup_TamanhoVetor.add(jRdBtn_20kele);
         jRdBtn_20kele.setText("20000 elementos");
+        jRdBtn_20kele.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRdBtn_20keleActionPerformed(evt);
+            }
+        });
 
         jLabel_Titulo.setText("Métodos de Ordenação");
 
@@ -152,7 +159,31 @@ public class TelaTeste extends javax.swing.JFrame {
 
     private void jButton_ExecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ExecActionPerformed
         
+        Random novonum = new Random();  
+        int[] vetor;
+        if(jRdBtn_30ele.isSelected()){   
+            vetor = new int[30];
+            for (int i = 0; i < 30; i++) {
+                vetor[i]= novonum.nextInt(15)+novonum.nextInt(10);
+            }    
+        }else if(jRdBtn_20kele.isSelected()) {   
+            vetor=new int[20000];
+            for (int i = 0; i < 20000; i++) {
+                vetor[i] = novonum.nextInt(45000)+novonum.nextInt(5000);
+            }
+        }
+           
+        
+        
+        
+        
+        
+        
     }//GEN-LAST:event_jButton_ExecActionPerformed
+
+    private void jRdBtn_20keleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRdBtn_20keleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRdBtn_20keleActionPerformed
 
     /**
      * @param args the command line arguments
