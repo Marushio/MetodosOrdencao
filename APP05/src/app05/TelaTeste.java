@@ -160,19 +160,35 @@ public class TelaTeste extends javax.swing.JFrame {
     private void jButton_ExecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ExecActionPerformed
         
         Random novonum = new Random();  
-        int[] vetor;
+        int[] vetor=null;
         if(jRdBtn_30ele.isSelected()){   
             vetor = new int[30];
-            for (int i = 0; i < 30; i++) {
-                vetor[i]= novonum.nextInt(15)+novonum.nextInt(10);
-            }    
+            
         }else if(jRdBtn_20kele.isSelected()) {   
-            vetor=new int[20000];
-            for (int i = 0; i < 20000; i++) {
-                vetor[i] = novonum.nextInt(45000)+novonum.nextInt(5000);
-            }
-        }
+            vetor = new int[20000];
            
+        }
+        //inicio de todos os metodos de ordenamento.
+        BubbleSort bubbleSort = new BubbleSort();
+        InsertionSort insertionSort = new InsertionSort();
+        MergeSort mergeSort = new MergeSort();
+        QuickSort quickSort =  new QuickSort();
+        
+        if(jRdBtn_Aleatorio.isSelected()){
+            for (int i = 0; i < vetor.length; i++) {
+                vetor[i] = novonum.nextInt(45000)+novonum.nextInt(5000);
+            }    
+            
+        }
+        if(jRdBtn_InvOrd.isSelected()){
+            int Nmaior = vetor.length;
+            for (int i = 0; i < vetor.length; i++) {
+                vetor[i] = Nmaior--;
+            } 
+        }
+        if(jRdBtn_10percent.isSelected()){
+            
+        }
         
         
         
