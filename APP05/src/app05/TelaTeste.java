@@ -187,7 +187,15 @@ public class TelaTeste extends javax.swing.JFrame {
             } 
         }
         if(jRdBtn_10percent.isSelected()){
-            
+            int porcentagemVet=vetor.length/10;
+            int indice=0;
+            for(int j=0;j<10;j++){
+               int numeroRandomico=novonum.nextInt(45000)+novonum.nextInt(5000); 
+               for (int i=0;i <porcentagemVet; i++) {
+                   vetor[indice]=numeroRandomico;
+                   indice++;
+               } 
+            }
         }
         
         
