@@ -29,7 +29,7 @@ public class MergeSort {
         trocas=0;
         tempoExecucao = 0;
     }
-    public void mergeSort(){
+    public void executarOrdenacao(){
         long inicio=System.nanoTime(); 
         mergeSortRecurso(v,0,v.length-1);
         long fim = System.nanoTime();

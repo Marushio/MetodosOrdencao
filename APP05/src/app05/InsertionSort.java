@@ -21,9 +21,9 @@ public class InsertionSort {
         trocas=0;
         tempoExecucao = 0;
     }
-    public void insertionSort(){
+    public void executarOrdenacao(){
         
-        System.out.println("Inserction");
+       // System.out.println("Inserction");
        // mostrarVetor(a);
         long inicio=System.nanoTime();  
         for (int i = 1; i < v.length; i++) {

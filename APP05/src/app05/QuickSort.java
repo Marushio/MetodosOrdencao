@@ -21,7 +21,7 @@ public class QuickSort {
         trocas=0;
         tempoExecucao = 0;
     }
-    public void qSort(){
+    public void executarOrdenacao(){
         
         long inicio=System.nanoTime(); 
         qSort2(0,n-1);

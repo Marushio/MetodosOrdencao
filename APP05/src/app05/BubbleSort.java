@@ -22,13 +22,13 @@ public class BubbleSort {
         trocas=0;
         tempoExecucao = 0;
     }
-    public void bubbleSort1(){
+    public void executarOrdenacao(){
         int i,j,tmp;
        
         long inicio=System.nanoTime(); 
         for (i=0; i<n-1; i++){
             for (j=0; j<n-2-i; j++)
-                if (v[j]<v[j+1]) {
+                if (v[j]>v[j+1]) {
                     tmp= v[j];
                     v[j]= v[j+1];
                     v[j+1] = tmp;

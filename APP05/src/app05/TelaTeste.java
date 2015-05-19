@@ -21,10 +21,11 @@ public class TelaTeste extends javax.swing.JFrame {
         initComponents();
         vetDados=new VetDados();
         //Criar modelo
-        TabelaModelo dados = new TabelaModelo(vetDados);
+        TabelaModelo modelo = new TabelaModelo(vetDados);
         //Vincular a tabela com o modelo
-        jtTabela.setModel(dados);   
+        jtTabela.setModel(modelo);   
         jRdBtn_30ele.setSelected(true);
+        jRdBtn_InvOrd.setSelected(true);
     }
 
 
@@ -168,11 +169,7 @@ public class TelaTeste extends javax.swing.JFrame {
             vetor = new int[20000];
            
         }
-        //inicio de todos os metodos de ordenamento.
-        BubbleSort bubbleSort = new BubbleSort();
-        InsertionSort insertionSort = new InsertionSort();
-        MergeSort mergeSort = new MergeSort();
-        QuickSort quickSort =  new QuickSort();
+        
         
         if(jRdBtn_Aleatorio.isSelected()){
             for (int i = 0; i < vetor.length; i++) {
@@ -198,7 +195,38 @@ public class TelaTeste extends javax.swing.JFrame {
             }
         }
         
+        //inicio de todos os metodos de ordenamento.
+        BubbleSort bubbleSort = new BubbleSort();
+        InsertionSort insertionSort = new InsertionSort();
+        MergeSort mergeSort = new MergeSort();
+        QuickSort quickSort =  new QuickSort();
+        // passa o vetor como parametro
+        bubbleSort.leVector(vetor.clone());
+        insertionSort.leVector(vetor.clone());
+        mergeSort.leVector(vetor.clone());
+        quickSort.leVector(vetor.clone());
+        //executa a ordenação
+        bubbleSort.executarOrdenacao();
+        insertionSort.executarOrdenacao();
+        mergeSort.executarOrdenacao();
+        quickSort.executarOrdenacao();
+        //inicia o vetor com os dados de execução de cada modelo para passar par aa tabela
+        Dados dados;
+        vetDados=new VetDados();  
+        dados=new Dados("Bubble Sort",bubbleSort.getTrocas(),bubbleSort.getTempoExecucao());
+        vetDados.add(dados);
+  
+        dados=new Dados("Insertion Sort",insertionSort.getTrocas(),insertionSort.getTempoExecucao());
+        vetDados.add(dados);
         
+        dados=new Dados("Merge Sort",mergeSort.getTrocas(),mergeSort.getTempoExecucao());
+        vetDados.add(dados);
+        
+        dados=new Dados("Quick Sort",quickSort.getTrocas(),quickSort.getTempoExecucao());
+        vetDados.add(dados);
+        TabelaModelo modelo = new TabelaModelo(vetDados);
+        //Vincular a tabela com o modelo
+        jtTabela.setModel(modelo);  
         
         
         

@@ -14,6 +14,12 @@ public class Dados {
     private int nTrocas;
     private long tExecução;
 
+    public Dados(String nAlgoritmo, int nTrocas, long tExecução) {
+        this.nAlgoritmo = nAlgoritmo;
+        this.nTrocas = nTrocas;
+        this.tExecução = tExecução;
+    }
+    
     public String getnAlgoritmo() {
         return nAlgoritmo;
     }

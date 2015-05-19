@@ -44,8 +44,19 @@ public class TabelaModelo extends AbstractTableModel {
     }
 
     @Override
-    public Object getValueAt(int rowIndex, int columnIndex) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Object getValueAt(int row, int column) {
+        //Obter o produto da linha desejada
+        Dados dados = (Dados) vetDados.get(row);
+        switch (column){
+            case 0:
+                return dados.getnAlgoritmo();
+            case 1:
+                return dados.getnTrocas();
+            case 2:
+                return dados.gettExecução();
+            default:
+                return "Ocorreu um erro.";
+        }
     }
 
  
