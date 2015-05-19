@@ -70,6 +70,7 @@ public class QuickSort {
         aux=v[x];
         v[x]=v[y];
         v[y]=aux;
+        trocas ++;
     }
 
     public int[] getV() {

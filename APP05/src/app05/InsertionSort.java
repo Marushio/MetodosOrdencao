@@ -31,6 +31,7 @@ public class InsertionSort {
             int j;
             for (j = i - 1; j >= 0 && temp <v[j]; j--) {
                 v[j+1] = v[j];
+                trocas++;
             }
             v[j + 1] = temp;
         }
