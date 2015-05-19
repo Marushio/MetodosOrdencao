@@ -18,21 +18,13 @@ public class TelaTeste extends javax.swing.JFrame {
     public TelaTeste() {
         initComponents();
         vetDados=new VetDados();
+        //Criar modelo
         TabelaModelo dados = new TabelaModelo(vetDados);
         //Vincular a tabela com o modelo
         jtTabela.setModel(dados);
         
     }
-    
-    public TelaTeste(VetDados vetDados){
-        this.vetDados = vetDados;
-        initComponents();
-        //Criar modelo
-        TabelaModelo dados = new TabelaModelo(vetDados);
-        //Vincular a tabela com o modelo
-        jtTabela.setModel(dados);
-    
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
