@@ -31,35 +31,32 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jRdBtn_10percent" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRdBtn_InvOrd" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRdBtn_Aleatorio" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRdBtn_20kele" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jRdBtn_30ele" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel_TmnVetor" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel_Cenario" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRdBtn_10percent" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRdBtn_InvOrd" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRdBtn_Aleatorio" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel_Cenario" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRdBtn_20kele" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRdBtn_30ele" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel_TmnVetor" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="346" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton_Exec" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="346" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="176" max="-2" attributes="0"/>
-                      <Component id="jLabel_Titulo" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton_Exec" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel_Titulo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -68,9 +65,14 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jLabel_Titulo" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="182" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jButton_Exec" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <Component id="jLabel_TmnVetor" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jRdBtn_30ele" min="-2" max="-2" attributes="0"/>
@@ -82,13 +84,9 @@
                       <Component id="jRdBtn_Aleatorio" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jRdBtn_InvOrd" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jRdBtn_10percent" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jRdBtn_10percent" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton_Exec" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
